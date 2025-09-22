@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark">
+
+    <title>uneazy_about</title>
+
+
+    <!-- 최신 브라우저용 (SVG) -->
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    
+    <!-- 백업용 (PNG 512x512) -->
+    <link rel="icon" href="./favicon-512.png" sizes="512x512" type="image/png">
+    
+    <!-- iOS 홈화면용 -->
+    <link rel="apple-touch-icon" href="./favicon-512.png">
+
+    <!--* adobe font 적용 *-->
+    <link rel="stylesheet" href="https://use.typekit.net/fma2vjh.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__wrap">
+            <div class="header__wrapbox">
+                <div class="header__title">
+                    <div class="title">
+                        <div class="title_img"></div>
+                        <div class="title_text">
+                            <p>uneazy</p>
+                        </div>
+                        <div class="title_time"></div>
+                    </div>
+                </div>
+                <div class="header__navwrap">
+                    <nav class="nav">
+                        <ul>
+                            <li>
+                                <a href="/" target="_self">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M10 14V8.66667C10 8.48985 9.92976 8.32029 9.80474 8.19526C9.67971 8.07024 9.51014 8 9.33333 8H6.66667C6.48986 8 6.32029 8.07024 6.19526 8.19526C6.07024 8.32029 6 8.48985 6 8.66667V14M2 6.66667C1.99995 6.47271 2.04222 6.28108 2.12386 6.10514C2.20549 5.92921 2.32453 5.7732 2.47267 5.648L7.13933 1.64867C7.37999 1.44527 7.6849 1.33368 8 1.33368C8.3151 1.33368 8.62001 1.44527 8.86067 1.64867L13.5273 5.648C13.6755 5.7732 13.7945 5.92921 13.8761 6.10514C13.9578 6.28108 14 6.47271 14 6.66667V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V6.66667Z"
+                                            stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <p>Home</p>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="./" target="_self">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M12.6666 14V12.6667C12.6666 11.9594 12.3857 11.2811 11.8856 10.781C11.3855 10.281 10.7072 10 9.99998 10H5.99998C5.29274 10 4.61446 10.281 4.11436 10.781C3.61426 11.2811 3.33331 11.9594 3.33331 12.6667V14M10.6666 4.66667C10.6666 6.13943 9.47274 7.33333 7.99998 7.33333C6.52722 7.33333 5.33331 6.13943 5.33331 4.66667C5.33331 3.19391 6.52722 2 7.99998 2C9.47274 2 10.6666 3.19391 10.6666 4.66667Z"
+                                            stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <p>About</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../work" target="_self">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                        fill="none">
+                                        <path
+                                            d="M3.33333 2C2.97971 2 2.64057 2.14048 2.39052 2.39052C2.14048 2.64057 2 2.97971 2 3.33333M12.6667 2C13.0203 2 13.3594 2.14048 13.6095 2.39052C13.8595 2.64057 14 2.97971 14 3.33333M3.33333 14C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667M6 2H6.66667M6 14H7.33333M9.33333 2H10M2 6V6.66667M14 6V7.33333M2 9.33333V10M8.02267 8.454C7.99863 8.39371 7.9928 8.32769 8.00589 8.26412C8.01898 8.20055 8.05041 8.14221 8.09631 8.09631C8.14221 8.05041 8.20055 8.01898 8.26412 8.00589C8.32769 7.9928 8.39371 7.99863 8.454 8.02267L14.454 10.356C14.5183 10.3811 14.5733 10.4256 14.6112 10.4833C14.6491 10.541 14.6682 10.6091 14.6658 10.6781C14.6634 10.7472 14.6396 10.8137 14.5977 10.8686C14.5558 10.9235 14.4979 10.9641 14.432 10.9847L12.136 11.6967C12.0324 11.7287 11.9382 11.7855 11.8615 11.8622C11.7848 11.9389 11.728 12.0331 11.696 12.1367L10.9847 14.432C10.9641 14.4979 10.9235 14.5558 10.8686 14.5977C10.8137 14.6396 10.7472 14.6634 10.6781 14.6658C10.6091 14.6682 10.541 14.6491 10.4833 14.6112C10.4256 14.5733 10.3811 14.5183 10.356 14.454L8.02267 8.454Z"
+                                            stroke="white" stroke-width="1.33333" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    <p>Work</p>
+                                </a>
+                            </li>
+                            <li class="contact" data-info="Contact">
+                                <a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M14.6666 4.66667L8.67265 8.48467C8.46924 8.60281 8.2382 8.66504 8.00298 8.66504C7.76776 8.66504 7.53672 8.60281 7.33331 8.48467L1.33331 4.66667M2.66665 2.66667H13.3333C14.0697 2.66667 14.6666 3.26363 14.6666 4.00001V12C14.6666 12.7364 14.0697 13.3333 13.3333 13.3333H2.66665C1.93027 13.3333 1.33331 12.7364 1.33331 12V4.00001C1.33331 3.26363 1.93027 2.66667 2.66665 2.66667Z"
+                                            stroke="#E5E7EB" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <p>Contact</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="nav__theme">
+                        <p>Theme</p>
+                        <div class="theme_buttonwrap">
+                            <div class="theme_button" data-theme="light">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path
+                                        d="M7.99998 1.33334V2.66667M7.99998 13.3333V14.6667M3.28665 3.28667L4.22665 4.22667M11.7733 11.7733L12.7133 12.7133M1.33331 8H2.66665M13.3333 8H14.6666M4.22665 11.7733L3.28665 12.7133M12.7133 3.28667L11.7733 4.22667M10.6666 8C10.6666 9.47276 9.47274 10.6667 7.99998 10.6667C6.52722 10.6667 5.33331 9.47276 5.33331 8C5.33331 6.52724 6.52722 5.33334 7.99998 5.33334C9.47274 5.33334 10.6666 6.52724 10.6666 8Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Light</p>
+                            </div>
+                            <div class="theme_button active" data-theme="dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path
+                                        d="M13.99 8.324C13.9275 9.48143 13.5311 10.596 12.8487 11.5329C12.1663 12.4699 11.2271 13.1891 10.1447 13.6037C9.06223 14.0183 7.88288 14.1104 6.74918 13.869C5.61548 13.6276 4.57597 13.063 3.7563 12.2434C2.93664 11.4239 2.37192 10.3844 2.13041 9.25074C1.88889 8.11706 1.98093 6.9377 2.39538 5.85521C2.80984 4.77273 3.52897 3.83346 4.46585 3.15096C5.40272 2.46846 6.51724 2.07194 7.67466 2.00933C7.94466 1.99467 8.086 2.316 7.94266 2.54467C7.46326 3.3117 7.25798 4.21858 7.36033 5.1173C7.46268 6.01602 7.86661 6.85352 8.50621 7.49312C9.14581 8.13272 9.98331 8.53665 10.882 8.639C11.7808 8.74135 12.6876 8.53607 13.4547 8.05667C13.684 7.91333 14.0047 8.054 13.99 8.324Z"
+                                        stroke="white" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <p>Dark</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="intro" class="intro" tabindex="0">
+        <h2 class="intro__title">ABOUT ME</h2>
+        <div class="intro__textbox">
+            <div class="textbox_title"><p>"모두를 사로잡는</p><p>DESIGN & INTERATION"</p></div>
+            <div class="textbox_bottom">
+                <p>시선을 사로잡는 디자인과 편리한 인터랙션을 모두 상충하는 개발자가 되고자 합니다.</p>
+                <p>트렌드에 예민하고 반응하고 새로운 기술에 흥미롭게 반응하고 이를 잘 활용하는 강점이 있습니다.</p>
+                <p>앞으로 더 나아가는 개발자가 될거라 확신합니다.</p>
+            </div>
+        </div>
+
+        <div class="nextpage">
+            <a href="#timelines">
+                <p>Scroll or Click here</p>
+                <div class="nextpage_arrow">
+                    <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.5 11.875L28.5 45.125M28.5 45.125L45.125 28.5M28.5 45.125L11.875 28.5" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="timelines" class="timelines" tabindex="0">
+        <div class="section_title">
+            <h2>ABOUT<span>TIMELINE</span></h2>
+        </div>
+        <div class="timeline__textbox">
+            <div class="timeline_title"><p>“새로운 경험을 양식으로 나아가는 개발자”</p></div>
+            <div class="timeline_innertext">
+                <p>새로운 경험이 저를 여기까지 오게 만들었습니다.</p>
+                <p>도전이 불안하기도 하지만 그 만큼 자신이 있었습니다.</p>
+                <p>도예과를 전공하여 그래픽디자인 웹디자인을 거쳐 웹 퍼블리싱까지 앞으로 더 나아가</p>
+                <p>FRONTEND DEVELOPER가 되기까지</p>
+                <p>그 모든 과정을 양식으로 나아가는 개발자가 되겠습니다.</p>
+            </div>
+        </div>
+        <div class="timeline__timelinewrap">
+            <div class="timeline">
+                <p class="timeline_left">CERAMIC ART</p>
+                <div class="timeline_line">
+                    <div class="line"></div>
+                </div>
+                <p class="timeline_right">도예과 전공</p>
+            </div>
+            <div class="timeline">
+                <p class="timeline_left">GRAPHIC DESIGN</p>
+                <div class="timeline_line">
+                    <div class="line"></div>
+                </div>
+                <p class="timeline_right">전공과정 중 첫 그래픽 디지인 만남</p>
+            </div>
+            <div class="timeline">
+                <p class="timeline_left">WEB DESIGN</p>
+                <div class="timeline_line">
+                    <div class="line"></div>
+                </div>
+                <p class="timeline_right">졸업 후 여러 학원을 거쳐 웹 디자인을 접함</p>
+            </div>
+            <div class="timeline">
+                <p class="timeline_left">WEB PUBLISHING</p>
+                <div class="timeline_line">
+                    <div class="line"></div>
+                </div>
+                <p class="timeline_right">직접 웹 사이트를 만들고 싶어져 HTML & CSS에 대해 공부</p>
+            </div>
+            <div class="timeline">
+                <p class="timeline_left">INTERACTIVE CLONE CODING</p>
+                <div class="timeline_line">
+                    <div class="line"></div>
+                </div>
+                <p class="timeline_right">모바일 화면에서도 자유롭게 볼 수 있는 웹 사이트를 제작</p>
+            </div>
+        </div>
+        <div class="timeline__goalbox">
+            <div class="goalbox">
+                <div class="goalbox_svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 46 46" fill="none">
+                        <path
+                            d="M34.5 15.3334V11.5001C34.5 10.4834 34.0962 9.50839 33.3773 8.78951C32.6584 8.07062 31.6834 7.66675 30.6667 7.66675H7.66671C6.65004 7.66675 5.67502 8.07062 4.95613 8.78951C4.23724 9.50839 3.83337 10.4834 3.83337 11.5001V24.9167C3.83337 25.9334 4.23724 26.9084 4.95613 27.6273C5.67502 28.3462 6.65004 28.7501 7.66671 28.7501H23M19.1667 36.4167V28.8267V34.8642M13.4167 36.4167H23M34.5 23.0001H38.3334C40.4505 23.0001 42.1667 24.7163 42.1667 26.8334V38.3334C42.1667 40.4505 40.4505 42.1667 38.3334 42.1667H34.5C32.3829 42.1667 30.6667 40.4505 30.6667 38.3334V26.8334C30.6667 24.7163 32.3829 23.0001 34.5 23.0001Z"
+                            stroke="#C9FFA5" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <p>현재 진행중인 목표 : &nbsp;&nbsp;<span>FRONT END DEV</span></p>
+            </div>
+            <div class="goalbox">
+                <div class="goalbox_svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 47 47" fill="none">
+                        <path
+                            d="M43.0833 19.5834V31.3334M11.75 24.4792V31.3334C11.75 32.8915 12.9879 34.3859 15.1915 35.4876C17.395 36.5894 20.3837 37.2084 23.5 37.2084C26.6163 37.2084 29.6049 36.5894 31.8085 35.4876C34.012 34.3859 35.25 32.8915 35.25 31.3334V24.4792M41.9475 21.389C42.298 21.2343 42.5955 20.9802 42.8031 20.6581C43.0107 20.336 43.1192 19.9601 43.1153 19.577C43.1113 19.1938 42.995 18.8203 42.7808 18.5025C42.5667 18.1848 42.264 17.9369 41.9103 17.7895L25.1254 10.1442C24.6151 9.91146 24.0608 9.79102 23.5 9.79102C22.9391 9.79102 22.3848 9.91146 21.8746 10.1442L5.09164 17.7817C4.74299 17.9344 4.4464 18.1854 4.23813 18.504C4.02986 18.8226 3.91895 19.1949 3.91895 19.5755C3.91895 19.9562 4.02986 20.3285 4.23813 20.6471C4.4464 20.9657 4.74299 21.2167 5.09164 21.3694L21.8746 29.0225C22.3848 29.2553 22.9391 29.3758 23.5 29.3758C24.0608 29.3758 24.6151 29.2553 25.1254 29.0225L41.9475 21.389Z"
+                            stroke="#20C130" stroke-width="3.75" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <p>다음으로 이룰 목표 :&nbsp;&nbsp;&nbsp;<span>MOBILE APP DEV</span></p>
+            </div>
+        </div>
+    
+        <div class="nextpage">
+            <a href="#about">
+                <div class="nextpage_arrow">
+                    <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.5 11.875L28.5 45.125M28.5 45.125L45.125 28.5M28.5 45.125L11.875 28.5" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="about" class="about" tabindex="0">
+        <div class="about__bottom">
+            <ul class="about__gridwrap">
+                <li class="grid01">
+                    <p class="grid_title"><a class="font_hamiscute" href="http://www.dlwldms.com" target="_self">www.dlwldms.com</a></p>
+                </li>
+        
+                <li class="grid02">
+                    <p>내일 더 성장하는 개발자</p>
+                    <p>배움을 즐기는 자</p>
+                </li>
+        
+                <li class="grid03 about__grid_innerbox">
+                    <p>Contact</p>
+                    <ul>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M18.3332 5.83325L10.8407 10.6058C10.5864 10.7534 10.2976 10.8312 10.0036 10.8312C9.70956 10.8312 9.42076 10.7534 9.1665 10.6058L1.6665 5.83325M3.33317 3.33325H16.6665C17.587 3.33325 18.3332 4.07944 18.3332 4.99992V14.9999C18.3332 15.9204 17.587 16.6666 16.6665 16.6666H3.33317C2.4127 16.6666 1.6665 15.9204 1.6665 14.9999V4.99992C1.6665 4.07944 2.4127 3.33325 3.33317 3.33325Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p>317dlwldms@gmail.com</p>
+                        </li>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M11.5265 13.8067C11.6986 13.8858 11.8925 13.9038 12.0762 13.8579C12.26 13.8121 12.4226 13.7049 12.5373 13.5542L12.8332 13.1667C12.9884 12.9598 13.1897 12.7917 13.4211 12.676C13.6526 12.5603 13.9078 12.5001 14.1665 12.5001H16.6665C17.1085 12.5001 17.5325 12.6757 17.845 12.9882C18.1576 13.3008 18.3332 13.7247 18.3332 14.1667V16.6667C18.3332 17.1088 18.1576 17.5327 17.845 17.8453C17.5325 18.1578 17.1085 18.3334 16.6665 18.3334C12.6883 18.3334 8.87295 16.7531 6.0599 13.94C3.24686 11.127 1.6665 7.31166 1.6665 3.33341C1.6665 2.89139 1.8421 2.46746 2.15466 2.1549C2.46722 1.84234 2.89114 1.66675 3.33317 1.66675H5.83317C6.2752 1.66675 6.69912 1.84234 7.01168 2.1549C7.32424 2.46746 7.49984 2.89139 7.49984 3.33341V5.83341C7.49984 6.09216 7.4396 6.34734 7.32388 6.57877C7.20817 6.8102 7.04016 7.0115 6.83317 7.16675L6.44317 7.45925C6.29018 7.57606 6.18235 7.74224 6.138 7.92954C6.09364 8.11684 6.11549 8.31373 6.19984 8.48675C7.33874 10.8 9.21186 12.6707 11.5265 13.8067Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p>010-4583-8375</p>
+                        </li>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M14.5832 5.41675H14.5915M5.83317 1.66675H14.1665C16.4677 1.66675 18.3332 3.53223 18.3332 5.83341V14.1667C18.3332 16.4679 16.4677 18.3334 14.1665 18.3334H5.83317C3.53198 18.3334 1.6665 16.4679 1.6665 14.1667V5.83341C1.6665 3.53223 3.53198 1.66675 5.83317 1.66675ZM13.3332 9.47508C13.436 10.1686 13.3176 10.8769 12.9946 11.4993C12.6717 12.1216 12.1608 12.6263 11.5345 12.9415C10.9083 13.2567 10.1985 13.3664 9.50633 13.255C8.81411 13.1436 8.17464 12.8168 7.67887 12.321C7.1831 11.8253 6.85628 11.1858 6.74489 10.4936C6.63351 9.80137 6.74322 9.09166 7.05844 8.46539C7.37366 7.83913 7.87832 7.3282 8.50066 7.00528C9.12299 6.68237 9.8313 6.56391 10.5248 6.66675C11.2323 6.77165 11.8872 7.1013 12.3929 7.607C12.8986 8.11271 13.2283 8.76765 13.3332 9.47508Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p><a href="https://www.instagram.com/317dlwldms/" target="_blank">317dlwldms</a></p>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="grid04 about__grid_innerbox">
+                    <p>Web Page & Blog</p>
+                    <ul>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.5 17.4999V10.8332C12.5 10.6122 12.4122 10.4002 12.2559 10.244C12.0996 10.0877 11.8877 9.99989 11.6667 9.99989H8.33333C8.11232 9.99989 7.90036 10.0877 7.74408 10.244C7.5878 10.4002 7.5 10.6122 7.5 10.8332V17.4999M2.5 8.33322C2.49994 8.09078 2.55278 7.85124 2.65482 7.63132C2.75687 7.4114 2.90566 7.21639 3.09083 7.05989L8.92417 2.06073C9.22499 1.80648 9.60613 1.66699 10 1.66699C10.3939 1.66699 10.775 1.80648 11.0758 2.06073L16.9092 7.05989C17.0943 7.21639 17.2431 7.4114 17.3452 7.63132C17.4472 7.85124 17.5001 8.09078 17.5 8.33322V15.8332C17.5 16.2753 17.3244 16.6992 17.0118 17.0117C16.6993 17.3243 16.2754 17.4999 15.8333 17.4999H4.16667C3.72464 17.4999 3.30072 17.3243 2.98816 17.0117C2.67559 16.6992 2.5 16.2753 2.5 15.8332V8.33322Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p><a href="http://www.dlwldms.com" target="_blank">dlwldms.com</a></p>
+                        </li>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M16.6667 2.5H3.33333C2.8731 2.5 2.5 2.8731 2.5 3.33333V7.5C2.5 7.96024 2.8731 8.33333 3.33333 8.33333H16.6667C17.1269 8.33333 17.5 7.96024 17.5 7.5V3.33333C17.5 2.8731 17.1269 2.5 16.6667 2.5Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M9.16667 11.6667H3.33333C2.8731 11.6667 2.5 12.0398 2.5 12.5V16.6667C2.5 17.1269 2.8731 17.5 3.33333 17.5H9.16667C9.6269 17.5 10 17.1269 10 16.6667V12.5C10 12.0398 9.6269 11.6667 9.16667 11.6667Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M16.6667 11.6667H14.1667C13.7064 11.6667 13.3333 12.0398 13.3333 12.5V16.6667C13.3333 17.1269 13.7064 17.5 14.1667 17.5H16.6667C17.1269 17.5 17.5 17.1269 17.5 16.6667V12.5C17.5 12.0398 17.1269 11.6667 16.6667 11.6667Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p><a href="https://frontend-dlwldms.tistory.com/" target="_blank">frontend-dlwldms</a>
+                            </p>
+                        </li>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M1.6665 5.00008H4.99984M1.6665 8.33341H4.99984M1.6665 11.6667H4.99984M1.6665 15.0001H4.99984M13.3332 1.66675V18.3334M4.99984 1.66675H14.9998C15.9203 1.66675 16.6665 2.41294 16.6665 3.33341V16.6667C16.6665 17.5872 15.9203 18.3334 14.9998 18.3334H4.99984C4.07936 18.3334 3.33317 17.5872 3.33317 16.6667V3.33341C3.33317 2.41294 4.07936 1.66675 4.99984 1.66675Z"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p><a href="https://www.notion.so/Frontend-Developer-23fa8ff395ee807fba53f978eafa5469?source=copy_link" target="_blank">dlwldms's Notion</a></p>
+                        </li>
+                        <li>
+                            <div class="about__grid_svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.4998 18.3334V15.0001C12.6158 13.9562 12.3164 12.9085 11.6665 12.0834C14.1665 12.0834 16.6665 10.4167 16.6665 7.50008C16.7332 6.45841 16.4415 5.43341 15.8332 4.58341C16.0665 3.62508 16.0665 2.62508 15.8332 1.66675C15.8332 1.66675 14.9998 1.66675 13.3332 2.91675C11.1332 2.50008 8.8665 2.50008 6.6665 2.91675C4.99984 1.66675 4.1665 1.66675 4.1665 1.66675C3.9165 2.62508 3.9165 3.62508 4.1665 4.58341C3.55973 5.42998 3.26523 6.46074 3.33317 7.50008C3.33317 10.4167 5.83317 12.0834 8.33317 12.0834C8.00817 12.4917 7.7665 12.9584 7.62484 13.4584C7.48317 13.9584 7.4415 14.4834 7.49984 15.0001M7.49984 15.0001V18.3334M7.49984 15.0001C3.7415 16.6667 3.33317 13.3334 1.6665 13.3334"
+                                        stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <p><a href="https://github.com/dlwldms317/portfolio2025" target="_blank">uneazy_2025</a></p>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="grid05">
+                    <p class="font_hamiscute">What is my Strengths</p>
+                </li>
+        
+                <li class="grid06 about__grid_innerbox">
+                    <p>About Ability</p>
+                    <ul>
+                        <li>
+                            <p>HTML5 & CSS3</p>
+                        </li>
+                        <li>
+                            <p>JavaScript</p>
+                        </li>
+                        <li>
+                            <p>Illustrator</p>
+                        </li>
+                        <li>
+                            <p>Photoshop</p>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="grid07 about__grid_innerbox">
+                    <p>About Personality</p>
+                    <ul>
+                        <li>
+                            <p>새로운것을 잘 받아들인다.</p>
+                        </li>
+                        <li>
+                            <p>배우는 것에 거부감이 없다.</p>
+                        </li>
+                        <li>
+                            <p>감정기복이 별로 없다.</p>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="grid08">
+                    <p class="font_hamiscute">What's Next</p>
+                </li>
+        
+                <li class="grid09 about__grid_innerbox">
+                    <p>Next steps</p>
+                    <ul>
+                        <li>
+                            <p>App Dev</p>
+                        </li>
+                        <li>
+                            <p>3D.js</p>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li class="grid10">
+                    <div class="about__grid_img">
+                    </div>
+                </li>
+        
+            </ul>
+        </div>
+    </section>
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <script src="../js/script.js"></script>
+    <script src="./js/about.js"></script>
+</body>
+
+</html>

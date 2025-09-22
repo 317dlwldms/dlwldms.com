@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Pretendard Variable';
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: swap;
+    src: url(../font/PretendardVariable.woff2) format(woff2-variations);
+}
+
+html, body{
+    font-size: 16px;
+    font-family: 'Pretendard Variable', 'Pretendard', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 400;
+    font-style: none;
+}
