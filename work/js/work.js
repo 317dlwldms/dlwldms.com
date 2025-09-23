@@ -19,7 +19,7 @@ function resizeGridItem(item) {
         window.getComputedStyle(grid).getPropertyValue("gap")
     );
     const rowSpan = Math.ceil(
-        (item.querySelector("img").offsetHeight + rowGap) / (rowHeight + rowGap)
+        (item.querySelector(".workbox_wrap").offsetHeight + 16 + rowGap) / (rowHeight + rowGap)
     );
     const height = Math.ceil(
         item.querySelector("img").offsetHeight
@@ -93,12 +93,12 @@ function workNavActive() {
 window.addEventListener("resize", () => {
     setSlidesVariables()
     resizeAllGridItem()
-    workboxActiveToggle();
+    // workboxActiveToggle();
     workNavClick();
 })
 window.addEventListener("load", () => {
     setSlidesVariables()
     resizeAllGridItem()
-    workboxActiveToggle();
+    // workboxActiveToggle();
     workNavClick();
 })

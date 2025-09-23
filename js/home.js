@@ -136,10 +136,13 @@ function worksBgImage() {
 
 function setSlidesVariables() {
     let boxWidth,marginRight
-    if (window.innerWidth <= 768) {
+    if ( window.innerWidth >=501 && window.innerWidth <= 768) {
         boxWidth = window.innerWidth * 0.7;
         marginRight = 24;
-    } else {
+    } else if(window.innerWidth <= 500){
+        boxWidth = window.innerWidth * 0.85;
+        marginRight = 24;
+    }else {
         boxWidth = 550;
         marginRight = 32;
     }

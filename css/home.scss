@@ -1,6 +1,6 @@
 $bg_color: #151515;
 $box_bg: #222;
-$sub: #f5f5f5;
+$sub: #fdfdfd;
 
 //home
 $blue : #549DCD;
@@ -155,10 +155,10 @@ h2 {
             }
 
             .textbox_bottom {
-                p {
-                    font-size: 0.875rem;
-                    line-height: 23px;
-                }
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                
             }
         }
 
@@ -182,7 +182,6 @@ h2 {
                 }
 
                 p {
-                    font-size: 0.875rem;
                     color: rgba($color: $sub, $alpha: 0.7);
                 }
             }
@@ -235,7 +234,6 @@ h2 {
                 }
 
                 .timeline_right {
-                    font-size: 0.875rem;
                     flex: 0 0 auto;
                 }
 
@@ -243,11 +241,27 @@ h2 {
                     .timeline_left {
                         color: $skyblue;
                     }
+                    &:hover{
+                        .line{
+                            background: rgba($color: $skyblue, $alpha: 0.3);
+                        }
+                        .timeline_right{
+                            color: $skyblue;
+                        }
+                    }
                 }
 
                 &:nth-child(2) {
                     .timeline_left {
                         color: #A1D2EC;
+                    }
+                    &:hover{
+                        .line{
+                            background: rgba($color: #A1D2EC, $alpha: 0.3);
+                        }
+                        .timeline_right{
+                            color: #A1D2EC;
+                        }
                     }
                 }
 
@@ -255,17 +269,41 @@ h2 {
                     .timeline_left {
                         color: #9BCDE9;
                     }
+                    &:hover{
+                        .line{
+                            background: rgba($color: #9BCDE9, $alpha: 0.3);
+                        }
+                        .timeline_right{
+                            color: #9BCDE9;
+                        }
+                    }
                 }
 
                 &:nth-child(4) {
                     .timeline_left {
                         color: #7CB8DD;
                     }
+                    &:hover{
+                        .line{
+                            background: rgba($color: #7CB8DD, $alpha: 0.3);
+                        }
+                        .timeline_right{
+                            color: #7CB8DD;
+                        }
+                    }
                 }
 
                 &:nth-child(5) {
                     .timeline_left {
                         color: $blue;
+                    }
+                    &:hover{
+                        .line{
+                            background: rgba($color: $blue, $alpha: 0.3);
+                        }
+                        .timeline_right{
+                            color: $blue;
+                        }
                     }
                 }
             }
@@ -280,7 +318,6 @@ h2 {
                 gap: 6px;
 
                 p {
-                    font-size: 0.875rem;
                     text-decoration: underline;
                     color: rgba($color: $sub, $alpha: 0.8);
                     top: -2px;
@@ -343,7 +380,6 @@ h2 {
 
             p {
                 top: -2px;
-                font-size: 0.875rem;
                 opacity: 0.8;
             }
         }
@@ -439,7 +475,6 @@ h2 {
                     padding: 4px 8px 6px;
 
                     p {
-                        font-size: 0.875rem;
                         line-height: 18px;
                         text-align: center;
                         white-space: nowrap;
@@ -542,11 +577,10 @@ h2 {
             .skilltool_innertext {
                 text-align: center;
                 margin-bottom: 6rem;
-
-                p {
-                    font-size: 0.875rem;
-                    line-height: 22px;
-                }
+                display: flex;
+                gap: 4px;
+                flex-direction: column;
+                
             }
 
             .skilltool_boxwrap {
@@ -618,7 +652,6 @@ h2 {
                             }
 
                             p {
-                                font-size: 0.875rem;
                                 color: rgba($color: $sub, $alpha: 0.9);
                             }
                         }
@@ -722,6 +755,7 @@ h2 {
         }
 
         .workbox_text {
+            position: absolute;
             width: 100%;
             display: flex;
             flex-direction: row;
@@ -738,7 +772,6 @@ h2 {
 
             span {
                 overflow: hidden;
-                font-size: 0.875rem;
                 opacity: 0.7;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -779,7 +812,6 @@ h2 {
         gap: 6px;
 
         p {
-            font-size: 0.875rem;
             text-decoration: underline;
             top: -2px;
         }
@@ -848,6 +880,31 @@ body.light {
                         background: rgba($color: $box_bg, $alpha: 0.2);
                     }
                 }
+                .timeline:nth-child(1):hover{
+                    .line{
+                        background: rgba($color: $skyblue, $alpha: 0.5);
+                    }
+                }
+                .timeline:nth-child(2):hover{
+                    .line{
+                        background: rgba($color: #A1D2EC, $alpha: 0.5);
+                    }
+                }
+                .timeline:nth-child(3):hover{
+                    .line{
+                        background: rgba($color: #9BCDE9, $alpha: 0.5);
+                    }
+                }
+                .timeline:nth-child(4):hover{
+                    .line{
+                        background: rgba($color: #7CB8DD, $alpha: 0.5);
+                    }
+                }
+                .timeline:nth-child(5):hover{
+                    .line{
+                        background: rgba($color: $blue, $alpha: 0.5);
+                    }
+                }
             }
 
             .bottom_url a {
@@ -902,7 +959,7 @@ body.light {
         .ability__bottomwrap {
             .skilltool .skilltool_boxwrap .skilltool_box {
 
-                background: linear-gradient(#f5f5f5, #f5f5f5) padding-box,
+                background: linear-gradient($sub, $sub) padding-box,
                     $now_gradient border-box;
 
                 .box_black {
@@ -1109,7 +1166,7 @@ body.light {
                     }
 
                     .timeline_right {
-                        font-size: 0.75rem;
+                        font-size: 0.875rem;
                     }
                 }
             }
@@ -1220,9 +1277,7 @@ body.light {
 
                 .textbox_bottom p {
                     padding: 0 1rem;
-                    margin-bottom: 0.75rem;
-                    line-height: 1rem;
-                    font-size: 0.75rem;
+                    font-size: 0.875rem;
 
                     &:nth-child(1) {
                         display: none;
@@ -1264,7 +1319,8 @@ body.light {
                 margin-bottom: 2.5rem;
 
                 p {
-                    font-size: 1rem;
+                    font-size: 1.5rem;
+                    padding: 0 1rem;
                 }
             }
 
@@ -1356,7 +1412,7 @@ body.light {
 
                     .skillbox_textbox {
                         p {
-                            font-size: 0.75rem;
+                            font-size: 0.875rem;
                             margin-bottom: 2px;
                         }
 
@@ -1388,9 +1444,9 @@ body.light {
                     width: 90%;
                     max-width: 400px;
                     margin: 0 auto 4rem;
-
                     p {
-                        font-size: 0.75rem;
+                        font-size: 0.875rem;
+                        line-height: 18px;
                     }
 
                     p:nth-child(1),
@@ -1462,6 +1518,12 @@ body.light {
 @media screen and (max-width:640px) {
     .about {
         .about__bottom {
+            .bottom_toptext{
+                p {
+                    font-size: 1.25rem;
+                    padding: 0 1rem;
+                }
+            }
             .bottom_timelinewrap {
                 .timeline {
                     .timeline_left {
@@ -1487,4 +1549,14 @@ body.light {
         }
     }
 
+}
+@media screen and (max-width:500px) {
+    .works{
+        .workbox{
+            .workbox_text{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
 }
