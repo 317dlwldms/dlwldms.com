@@ -3,23 +3,57 @@ const works = [
         categories: ["develop"],
         img: "develop02.jpg",
         title: "TIK-TOK",
-        sub: "REST API 이용 사용자의 위치에 기반한 시간과 날씨 구현",
-        programs: ["HTML5 & CSS3", "JavaScript", "REST API"],
-        link: "https://www.dlwldms.com/tik-tok",
+        sub: "REST API Weather webpage",
+        modalImg: "develop02_long.jpg",
+        modalTitle: "TIK-TOK",
+        modalSub : [
+            "REST API Weather API, Spotify API를 활용하여 제작하였습니다.<br />유저의 위치를 기반으로 시간과 날씨를 확인하고 그에 맞는 음악을 Spotify API를 이용하여 음악을 추천해 줍니다.",
+            "Classic section은 기본 벽걸이 시계, Simple section은 심플한 느낌을 주고자 각 구간마다 box-shadow를 통해 구분하여 깔끔한 레이아웃, Casual section은 애플워치의 규격에 맞는 화면으로 구성하였습니다.",
+            "사용자에게 위치 허용을 구하는 팝업창이 뜹니다.<br />사이트의 종류에 따라 허락을 하여도 기기의 설정으로 인해 위치를 확인할 수 없는 경우에는 기본 위치를 서울 서초구로 설정해두었습니다.",
+            
+        ],
+        modalInfo : [
+            "기여도 : 100%",
+            "제작기간 : 14일",
+        ],
+        modalLinksGoto : "https://dlwldms.com/tik-tok",
+        modalLinksGithub : "https://github.com/317dlwldms/tik-tok",
+        programs: ["HTML5", "CSS3", "JavaScript", "REST API", "Figma", "Photoshop", "Illustrator"],
     },
     {
         categories: ["develop"],
         img: "develop01.jpg",
         title: "AKMU의 사춘기(思春記)",
-        sub: "첫 WEB PUBLISHING 했던 작품으로 j-Query로 구현",
-        programs: ["HTML5 & CSS3", "j-Query"],
-        link: "https://www.dlwldms.com/akmu",
+        sub: "Album Introduce webpage",
+        modalImg: "develop01_long.jpg",
+        modalTitle: "AKMU 사춘기",
+        modalSub : [
+            "웹 디자인 과정을 거쳐 처음으로 작업한 웹사이트입니다.",
+            "1500px 이상의 화면에서 최적화된 페이지입니다. 1500px 이하일 경우 오류는 없지만 보기에 불편할 수 있습니다.",
+            "j-Query를 이용해 제작하였으며 스크롤 애니메이션을 넣어 더 동적인 변화를 볼 수 있게 구현하였습니다.<br />AKMU의 앨범 중 악뮤사춘기라는 앨범의 상, 하 버전에 대한 페이지이며 각 앨범의 수록곡과 뮤직비디오 공식 포스터를 보여줍니다.",
+        ],
+        modalInfo : [
+            "기여도 : 100%",
+            "제작기간 : 26일",
+        ],
+        modalLinksGoto : "https://dlwldms.com/akmu",
+        modalLinksGithub : "https://github.com/317dlwldms/akmu",
+        programs: ["HTML5", "CSS3", "j-Query", "Photoshop", "Illustrator"],
     },
     {
         categories: ["design"],
         img: "design01.jpg",
         title: "소년이 온다",
         sub: "Book cover design",
+        modalTitle: "소년이 온다",
+        modalSub : [
+            "한강작가 '소년이 온다'의 북커버를 Redesign해 보았습니다.",
+            "소설 중 '살아 있는 사람들이 죽은 자의 말을 들어주지 않으면, 죽은 자들은 영원히 떠돌 수밖에 없을 것이다.'라는 구절이 인상깊었고 이를 북커버 디자인으로 표현해 보았습니다.",
+        ],
+        modalInfo : [
+            "기여도 : 100%",
+            "제작기간 : 3시간",
+        ],
         programs: ["Photoshop", "Illustrator"],
     },
     {
@@ -27,13 +61,31 @@ const works = [
         img: "design02.jpg",
         title: "W.DRESSROOM",
         sub: "Brochure design",
-        programs: ["Photoshop", "Illustrator"],
+        modalTitle: "W.DRESSROOM",
+        modalSub : [
+            "섬유향수 W.DRESSROOM의 브로슈어를 제작해 보았습니다.",
+            "향의 종류와 향에 대한 설명을 볼 수 있습니다.",
+        ],
+        modalInfo : [
+            "기여도 : 100%",
+            "제작기간 : 4시간",
+        ],
+        programs: ["Indesign", "Photoshop", "Illustrator"],
     },
     {
         categories: ["design"],
         img: "design04.jpg",
         title: "핑크팬더 영화포스터",
         sub: "Poster design",
+        modalTitle: "PINK PANTHER",
+        modalSub : [
+            "재개봉한 pink panther 영화의 포스터를 Redesign 해보았습니다.",
+            "pink panther 원작인 흑백영화와 현대의 느낌을 주고자 흑백느낌과 핑크팬더 캐릭터의 색감을 더하였습니다.",
+        ],
+        modalInfo : [
+            "기여도 : 100%",
+            "제작기간 : 4시간",
+        ],
         programs: ["Photoshop"],
     },
     {
@@ -41,35 +93,34 @@ const works = [
         img: "design03.jpg",
         title: "Egon Schiele 전시회",
         sub: "Poster design",
+        modalTitle: "EGON SCHIELE",
+        modalSub : [
+            "오스트리아 출신의 표현주의 화가 에곤쉴레의 전시회 포스터입니다.",
+            "에곤쉴레의 손 드로잉 작품을 메인 소스로 활용하였습니다.",
+        ],
+        modalInfo : [
+            "기여도 : 100%",
+            "제작기간 : 4시간",
+        ],
         programs: ["Photoshop"],
     },
 ]
+/* <div class="workbox_text">
+        <div class="textbox">
+            <ul class="textbox_program">${programsHTML}</ul>
+        </div>
+    </div> */
 
 function workboxArray() {
-    works.forEach(work => {
-        const programsHTML = work.programs.map(p => `<li><p>${p}</p></li>`).join("");
+    works.forEach((work, idx) => {
         const categoriesClass = work.categories.join("");
 
         const workHTML = `
-            <div class="workbox ${categoriesClass}">
+            <div class="workbox ${categoriesClass}" data-index="${idx}">
                 <div class="workbox_wrap">
                     <img src="./asset/${work.img}" alt="${work.title}">
-                    <div class="workbox_text">
-                        <div class="linkbox">
-                            <a href="${work.link}" target="_blank">
-                                <div class="link_svg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M10.0002 13C10.4297 13.5741 10.9776 14.0491 11.6067 14.3929C12.2359 14.7367 12.9317 14.9411 13.6468 14.9923C14.362 15.0435 15.0798 14.9403 15.7515 14.6897C16.4233 14.4392 17.0333 14.047 17.5402 13.54L20.5402 10.54C21.451 9.59695 21.955 8.33394 21.9436 7.02296C21.9322 5.71198 21.4063 4.45791 20.4793 3.53087C19.5523 2.60383 18.2982 2.07799 16.9872 2.0666C15.6762 2.0552 14.4132 2.55918 13.4702 3.46997L11.7502 5.17997M14.0002 11C13.5707 10.4258 13.0228 9.95078 12.3936 9.60703C11.7645 9.26327 11.0687 9.05885 10.3535 9.00763C9.63841 8.95642 8.92061 9.0596 8.24885 9.31018C7.5771 9.56077 6.96709 9.9529 6.4602 10.46L3.4602 13.46C2.54941 14.403 2.04544 15.666 2.05683 16.977C2.06822 18.288 2.59407 19.542 3.52111 20.4691C4.44815 21.3961 5.70221 21.9219 7.01319 21.9333C8.32418 21.9447 9.58719 21.4408 10.5302 20.53L12.2402 18.82" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="textbox">
-                            <p class="textbox_title">${work.title}</p>
-                            <p class="textbox_sub">${work.sub}</p>
-                            <ul class="textbox_program">${programsHTML}</ul>
-                        </div>
-                    </div>
+                    <p class="textbox_title">${work.title}</p>
+                    <p class="textbox_sub">${work.sub}</p>
                 </div>
             </div>
         `;
@@ -78,7 +129,69 @@ function workboxArray() {
     
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    workboxArray()
+    workboxArray();
+
+    
+    const modal = document.getElementById("modal");
+    const modalImg = document.querySelector(".modal_img img");
+    const modalLeftP = document.querySelector(".left_p p");
+    const modalTitle = document.querySelector(".modal_title h2");
+    const modalSub = document.querySelector(".modal_innertext");
+    const modalInfotext = document.querySelector(".info_inner")
+    const modalPrograms = document.querySelector(".info_programs ul");
+    const modalLinks = document.querySelector(".modal_links");
+    const modalClose = document.querySelector(".modal_close");
+
+    const modalTitleH2 = document.querySelector(".modal_title h2");
+    const modalTitleUnder = document.querySelector(".title_under");
+
+    document.querySelectorAll(".workbox").forEach(box=>{
+        box.addEventListener("click",()=>{
+            const index = box.getAttribute("data-index");
+            const work = works[index];
+            const programsHTML = work.programs.map(p => `<li><p>${p}</p></li>`).join("");
+            const modalSubHTML = work.modalSub.map(p => `<p>${p}</p>`).join("");
+            const modalInfoTextHTML =work.modalInfo.map(p => `<p>${p}</p>`).join("");
+            const modalLinksHTML = `<a href="${work.modalLinksGoto}" target="_blank">GO TO</a>
+            <a href="${work.modalLinksGithub}" target="_blank">GITHUB</a>
+            <a href="${work.modalLinksGithub}" target="_blank">TISTORY</a>`
+
+            modalImg.alt = work.title;
+            modalTitle.textContent = work.title;
+            modalSub.innerHTML = modalSubHTML;
+            modalPrograms.innerHTML = programsHTML;
+            modalInfotext.innerHTML = modalInfoTextHTML;
+            modalLinks.innerHTML = modalLinksHTML;
+            modalLeftP.innerHTML = work.modalTitle;
+            
+            
+            console.dir(modalTitleH2)
+
+            if(work.categories.includes("design")){
+                modal.classList.add("design");
+                modalImg.src = `./asset/${work.img}`;
+                
+            }else{
+                modal.classList.remove("design");
+                modalImg.src = `./asset/${work.modalImg}`;
+                
+            }
+
+            document.body.classList.add("modal_open");
+            modal.style.display = "block";
+            modalTitleUnder.style.width = (modalTitleH2.clientWidth + 40) + "px";
+        })
+    })
+
+    modalClose.addEventListener("click",()=>{
+        document.body.classList.remove("modal_open")
+        modal.style.display = "none";
+        modalTitleUnder.style.width = 0 + "px";
+    });
+    modal.addEventListener("click",(e)=>{
+        if(e.target === modal) {
+            modal.style.display = "none";
+        }
+    })
 })

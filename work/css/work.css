@@ -10,13 +10,20 @@ h2 span {
   -webkit-text-fill-color: transparent;
 }
 
+body.modal_open {
+  overflow: hidden;
+}
+
 .work__header {
-  margin-top: 5rem;
   width: 100%;
   height: auto;
   z-index: 50;
 }
+.work__header .section_title {
+  padding-top: 5rem;
+}
 .work__header .worknav {
+  margin-top: 1rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -25,10 +32,9 @@ h2 span {
 .work__header .worknav ul {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 40px;
 }
 .work__header .worknav ul li {
-  padding: 3px 16px;
   border-radius: 100px;
   opacity: 0.6;
 }
@@ -38,19 +44,20 @@ h2 span {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 6px 16px;
-  border-radius: 50px;
-  border: 1px solid rgba(253, 253, 253, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .work__header .worknav ul li .worknav_svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
-.work__header .worknav ul li p {
+.work__header .worknav ul li .worknav_svg svg {
+  width: 100%;
+  height: 100%;
+}
+.work__header .worknav ul li .worknav_inner {
   font-weight: 600;
   font-size: 0.875rem;
 }
@@ -68,10 +75,10 @@ h2 span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem 0 3rem;
+  margin: 0 0 3rem;
+  padding: 1rem;
 }
 .workspace .workbox__wrap {
-  padding: 18px;
   width: 100%;
   display: grid;
   height: auto;
@@ -82,71 +89,36 @@ h2 span {
 .workspace .workbox {
   grid-row-end: span var(--row-span);
   padding: 4px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid rgba(253, 253, 253, 0.3);
+  cursor: pointer;
 }
 .workspace .workbox .workbox_wrap {
   width: 100%;
   height: auto;
 }
 .workspace .workbox .workbox_wrap img {
-  border-radius: 9px;
+  border-radius: 5px;
   overflow: hidden;
   display: block;
   width: 100%;
   overflow: hidden;
   object-fit: cover;
 }
-.workspace .workbox .workbox_text .linkbox {
+.workspace .workbox .textbox_title {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 35px;
-  height: 35px;
-  border-radius: 10px;
-  background: rgba(21, 21, 21, 0.6);
-  backdrop-filter: brightness(0.9) blur(8px);
-  -webkit-backdrop-filter: brightness(0.9) blur(8px);
-  box-shadow: 0px 0px 10px 1px rgba(21, 21, 21, 0.2);
-  border: 1px solid rgba(253, 253, 253, 0.3);
-}
-.workspace .workbox .workbox_text .linkbox a {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.workspace .workbox .workbox_text .linkbox .link_svg {
-  opacity: 0.8;
-}
-.workspace .workbox .workbox_text .textbox {
-  margin: 0.75rem;
-}
-.workspace .workbox .workbox_text .textbox_title {
-  position: absolute;
-  font-weight: 600;
-  top: -2.5em;
+  font-weight: 700;
+  margin-top: -1.5rem;
+  left: 0.5rem;
   opacity: 0.9;
   color: #222;
-}
-.workspace .workbox .workbox_text .textbox_sub {
+  opacity: 0.8;
   font-size: 0.875rem;
-  margin: 0.75rem 0;
-  opacity: 0.7;
 }
-.workspace .workbox .workbox_text .textbox_program {
-  display: flex;
-  gap: 5px;
-}
-.workspace .workbox .workbox_text .textbox_program li {
-  padding: 2px 10px;
-  border-radius: 100px;
-  background: rgba(253, 253, 253, 0.25);
-}
-.workspace .workbox .workbox_text .textbox_program li p {
-  font-size: 0.75rem;
-  opacity: 0.7;
+.workspace .workbox .textbox_sub {
+  font-size: 0.875rem;
+  margin: 0.5rem;
+  opacity: 0.9;
 }
 .workspace .workbox.active .workbox_text {
   display: flex;
@@ -161,11 +133,205 @@ h2 span {
   display: none;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #151515;
+  z-index: 51;
+  display: none;
+  overflow-y: auto;
+}
+.modal .modal__container {
+  width: 100%;
+  max-width: 1400px;
+  overflow-x: hidden;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.modal .modal__left {
+  width: 25%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.modal .modal__left .left_p {
+  position: fixed;
+  top: -3rem;
+}
+.modal .modal__left .left_p p {
+  position: absolute;
+  transform: translate(-50%, 150%) rotate(-90deg);
+  transform-origin: center center;
+  font-size: 8rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.modal .modal__left .left_p .left_top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(21, 21, 21, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.modal .modal__right {
+  width: 75%;
+  padding: 5.5rem 2rem 5.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modal .modal__right .modal_close {
+  cursor: pointer;
+  overflow: hidden;
+}
+.modal .modal__right .modal_close .modalclose {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.8;
+  left: -34px;
+}
+.modal .modal__right .modal_close .modalclose .modalclose_svg {
+  width: 30px;
+  height: 30px;
+}
+.modal .modal__right .modal_close .modalclose .modalclose_svg svg {
+  width: 100%;
+  height: 100%;
+}
+.modal .modal__right .modal_close .modalclose p {
+  font-weight: 45;
+  font-size: 1.5rem;
+}
+.modal .modal__right .modal_close .modalclose:hover {
+  left: 0;
+}
+.modal .modal__right .modal_title {
+  width: min-content;
+}
+.modal .modal__right .modal_title h2 {
+  white-space: nowrap;
+  font-size: 1.5rem;
+}
+.modal .modal__right .modal_title .title_under {
+  position: absolute;
+  width: 0px;
+  bottom: 0px;
+  left: -10px;
+  height: 18px;
+  transform: skewX(-8deg);
+  background: #FFBCD9;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+}
+.modal .modal__right .modal_innerbox {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+}
+.modal .modal__right .modal_innerbox .modal_innertext {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.modal .modal__right .modal_innerbox .modal_innertext p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  line-height: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.modal .modal__right .modal_innerbox .modal_info {
+  width: 35%;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal .modal__right .modal_innerbox .info_inner {
+  display: flex;
+  flex-direction: column;
+}
+.modal .modal__right .modal_innerbox .info_inner p {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  line-height: 20px;
+}
+.modal .modal__right .modal_innerbox .info_programs ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.modal .modal__right .modal_innerbox .info_programs ul li {
+  padding: 1px 10px;
+  border-radius: 50px;
+  background: rgba(253, 253, 253, 0.3);
+}
+.modal .modal__right .modal_innerbox .info_programs ul li p {
+  font-size: 0.875rem;
+}
+.modal .modal__right .modal_links {
+  width: 100%;
+  display: flex;
+  padding-left: 2rem;
+  top: -2rem;
+  gap: 2rem;
+}
+.modal .modal__right .modal_links a {
+  top: 2.8rem;
+  width: 80px;
+  aspect-ratio: 1/1;
+  border-radius: 80px;
+  border: 1px solid rgba(253, 253, 253, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-align: center;
+  background: #222;
+}
+.modal .modal__right .modal_links a:hover {
+  top: 2.5rem;
+  background: #555;
+}
+.modal .modal__right .modal_img {
+  top: -2rem;
+  width: 100%;
+  height: 100%;
+}
+.modal .modal__right .modal_img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.modal.design .modal_links {
+  display: none;
+}
+.modal.design .modal_img {
+  top: 0;
+}
+
 body.light a {
   color: #222;
 }
-body.light .workspace .workbox .workbox_text {
-  background: rgba(21, 21, 21, 0.15);
+body.light .work__header .worknav ul li a .worknav_svg svg path {
+  stroke: #222;
+}
+body.light .workspace .workbox {
+  border: 1px solid rgba(21, 21, 21, 0.2);
 }
 body.light .workspace .workbox .workbox_text .linkbox {
   background: rgba(253, 253, 253, 0.55);
@@ -177,16 +343,32 @@ body.light .workspace .workbox .workbox_text .linkbox {
 body.light .workspace .workbox .workbox_text .linkbox .link_svg svg path {
   stroke: #151515;
 }
-body.light .workspace .workbox .workbox_text .textbox {
-  background: rgba(253, 253, 253, 0.55);
-  backdrop-filter: brightness(1.1) blur(8px);
-  -webkit-backdrop-filter: brightness(1.1) blur(8px);
-  box-shadow: 0px 0px 10px 1px rgba(21, 21, 21, 0.08);
-  border: 1px solid rgba(253, 253, 253, 0.75);
-}
 body.light .workspace .workbox .workbox_text .textbox .textbox_program li {
-  background: rgba(253, 253, 253, 0.5);
+  background: rgba(21, 21, 21, 0.15);
   border: 1px solid rgba(253, 253, 253, 0.8);
+}
+body.light .modal {
+  background: #fdfdfd;
+}
+body.light .modal .modal__left .left_top {
+  background: rgba(253, 253, 253, 0.85);
+}
+body.light .modal .modalclose_svg svg path {
+  stroke: #222;
+}
+body.light .modal .modal_innerbox .modal_info {
+  background: #efefef;
+}
+body.light .modal .modal_innerbox .info_programs li {
+  background: rgba(21, 21, 21, 0.2);
+  color: #fdfdfd;
+}
+body.light .modal .modal_links a {
+  background: #efefef;
+  border: 1px solid rgba(21, 21, 21, 0.25);
+}
+body.light .modal .modal_links a:hover {
+  background: #fdfdfd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -197,13 +379,54 @@ body.light .workspace .workbox .workbox_text .textbox .textbox_program li {
     background: linear-gradient(229deg, #FFBCD9 17.57%, #E61872 86.93%);
   }
 }
+@media screen and (max-width: 1023px) {
+  .modal .modal__right .modal_close .modalclose {
+    left: 0;
+  }
+}
 @media screen and (max-width: 768px) {
-  body.light .work__header {
-    border-bottom: 1px solid rgba(21, 21, 21, 0.1);
-    box-shadow: 0px 0px 8px 1px rgba(21, 21, 21, 0.08);
-    background: rgba(253, 253, 253, 0.7);
-    backdrop-filter: brightness(1.1) blur(10px);
-    -webkit-backdrop-filter: brightness(1.1) blur(10px);
+  .work__header .worknav ul {
+    gap: 1rem;
+  }
+  .work__header .worknav ul li .worknav_svg {
+    width: 16px;
+    height: 16px;
+  }
+  .work__header .worknav ul li a {
+    padding: 2px 12px;
+  }
+  .work__header .worknav ul li a .worknav_inner span {
+    display: none;
+  }
+  .modal .modal__container {
+    flex-direction: column;
+  }
+  .modal .modal__container .modal__left {
+    display: none;
+  }
+  .modal .modal__container .modal__right {
+    width: 100%;
+    top: 0;
+    padding: 5rem 2rem;
+  }
+  .modal .modal__container .modal__right .modal_innerbox {
+    flex-direction: column;
+  }
+  .modal .modal__container .modal__right .modal_innerbox .modal_innertext {
+    width: 100%;
+  }
+  .modal .modal__container .modal__right .modal_innerbox .modal_info {
+    width: 100%;
+  }
+  .modal .modal__container .modal_links {
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    width: auto;
+    gap: 1.5rem;
+  }
+  .modal .modal__container .modal_links a {
+    width: 70px;
   }
 }
 @keyframes textboxMove {
